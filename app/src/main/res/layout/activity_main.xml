@@ -4,11 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.epicodus.mylendinglibrary.MainActivity">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/library"
+        android:src="@drawable/library"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="My Lending Library"
@@ -23,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bookList"
         android:src="@drawable/bookicon"
-        android:background="@color/bright_foreground_inverse_material_light"
+        android:background="@null"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/textView"
         android:layout_toStartOf="@+id/textView" />
@@ -32,7 +39,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bookBorrowing"
         android:src="@drawable/bookicon"
-        android:background="@color/bright_foreground_inverse_material_light"
+        android:background="@null"
         android:layout_alignTop="@+id/bookLending"
         android:layout_toRightOf="@+id/bookLending"
         android:layout_toEndOf="@+id/bookLending"
@@ -45,7 +52,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bookLending"
         android:src="@drawable/bookicon"
-        android:background="@color/bright_foreground_inverse_material_light"
+        android:background="@null"
         android:layout_above="@+id/signUp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/bright_foreground_disabled_material_light" />
@@ -54,20 +61,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/signUp"
-        android:layout_marginTop="45dp"
-        android:src="@drawable/s"
-        android:background="@color/bright_foreground_material_dark"
+        android:layout_marginTop="47dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:background="@null"
         android:layout_below="@+id/bookList"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/readingSpot"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/signUp"
-        android:layout_centerHorizontal="true"
         android:src="@android:drawable/ic_menu_view"
-        android:background="@color/bright_foreground_material_dark" />
+        android:background="@null"
+        android:layout_alignTop="@+id/signUp"
+        android:layout_toRightOf="@+id/bookList"
+        android:layout_toEndOf="@+id/bookList" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Book List"
+        android:id="@+id/textView2"
+        android:layout_alignLeft="@+id/bookList"
+        android:layout_alignStart="@+id/bookList"
+        android:layout_above="@+id/bookList"
+        android:textColor="@color/hint_foreground_material_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Borrowed Books"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/bookLending"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/hint_foreground_material_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Lended Books"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/bookBorrowing"
+        android:layout_alignRight="@+id/bookBorrowing"
+        android:layout_alignEnd="@+id/bookBorrowing"
+        android:textColor="@color/hint_foreground_material_dark"/>
 
 </RelativeLayout>
