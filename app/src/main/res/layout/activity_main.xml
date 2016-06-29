@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.epicodus.mylendinglibrary.MainActivity">
+
+    <TextView
+        android:text="My Lending Library"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookList"
+        android:src="@drawable/bookicon"
+        android:background="@color/bright_foreground_inverse_material_light"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookBorrowing"
+        android:src="@drawable/bookicon"
+        android:background="@color/bright_foreground_inverse_material_light"
+        android:layout_alignTop="@+id/bookLending"
+        android:layout_toRightOf="@+id/bookLending"
+        android:layout_toEndOf="@+id/bookLending"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:focusable="true"
+        android:backgroundTint="@color/highlighted_text_material_dark" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookLending"
+        android:src="@drawable/bookicon"
+        android:background="@color/bright_foreground_inverse_material_light"
+        android:layout_above="@+id/signUp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/bright_foreground_disabled_material_light" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/s"
+        android:background="@color/bright_foreground_material_dark"
+        android:layout_below="@+id/bookList"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/readingSpot"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/signUp"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_menu_view"
+        android:background="@color/bright_foreground_material_dark" />
+
+</RelativeLayout>
